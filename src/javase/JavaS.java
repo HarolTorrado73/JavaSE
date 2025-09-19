@@ -1,9 +1,8 @@
 package javase;
 
-import javase.ui.Menu.*{
+import javase.ui.Menu;
 
     
-};
 
 public class JavaS {
     public static void main(String[] args) {
