@@ -40,9 +40,9 @@ public class Menu {
     static void MostrarPacienteMenu(){ 
         int response = 0;
         do {
-            System.out.println("1. Agregar");
-            System.out.println("2. Buscar");
-            System.out.println("3. Mostrar");
+            System.out.println("1. Agregar cita");
+            System.out.println("2. Buscar cita agregada");
+            System.out.println("3. Mostrar citas");
             System.out.println("4. Salir");
             Scanner sc = new Scanner(System.in);
             response = sc.nextInt();
