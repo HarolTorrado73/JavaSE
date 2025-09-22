@@ -51,7 +51,8 @@ public class Menu {
                     System.out.println("\nAgregar");
                     //meses
                     for (int i = 0; i < MESES.length; i++) {
-                        System.out.println(1 +". "+MESES[i]);
+                        System.out.println("--"+". "+MESES[i]);
+                        
                     }
                     break;
                 case 2:
@@ -66,6 +67,7 @@ public class Menu {
                 default:
                     System.out.println("\nOpcion no valida");
                     break;
+                
             }
             
         } while (true);
