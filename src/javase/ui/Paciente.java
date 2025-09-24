@@ -1,6 +1,6 @@
 package javase.ui;
 
-public class Paciente {
+public class Paciente extends Usuario {
     private int id;
     private String nombre;
     private String apellido;
@@ -14,11 +14,13 @@ public class Paciente {
     private String email;
 
     public Paciente() {
+        super(0, "", "");
     }
 
     public Paciente(int id, String nombre, String apellido, String fechaNacimiento, 
                     String sexo, String tipoSangre, String telefono, String direccion, 
                     String email, Double peso, Double estatura) { //sobre carga
+        super(id, nombre, email);
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -100,17 +102,19 @@ public class Paciente {
     
     //getters
     public Double getPeso() {
-        return this.peso + " Kg";
+        return this.peso;
     }
 
     public Double getEstatura() {
         return estatura;
     }
 
+    @Override
     public String getNombre() {
         return nombre;
     }
 
+    @Override
     public int getId() {
         return id;
     }
@@ -132,5 +136,10 @@ public class Paciente {
     }
     public String getTelefono() {
         return "+57: "+telefono;
+    }
+
+    @Override
+    public String toString() {
+        return "Paciente{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", peso=" + peso + ", estatura=" + estatura + ", fechaNacimiento=" + fechaNacimiento + ", sexo=" + sexo + ", tipoSangre=" + tipoSangre + ", telefono=" + telefono + ", direccion=" + direccion + ", email=" + email + '}';
     }
 }

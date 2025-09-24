@@ -2,11 +2,9 @@ package javase;
 
 import java.util.ArrayList;
 import java.util.Date;
+import javase.ui.Usuario;
 
-public class Doctor {
-    static int id ;
-    private String nombre;
-    private String email;
+public class Doctor extends Usuario{
     private String espeliacion;
 
     
@@ -15,22 +13,20 @@ public class Doctor {
     //Doctor(){
        // System.out.println("construyecto el objeto doctor");
     //}  
-    Doctor(int id, String nombre, String email, String espeliacion){
-        this.id = id;
-        this.nombre = nombre; //para poder asignarle un valor
-        this.email = email;
+    public Doctor(int id, String nombre, String email, String espeliacion){
+        super(id, nombre, email); //llama al constructor de la clase padre
         this.espeliacion = espeliacion;
     }
 
     public void MostrarDoctor(){
-        System.out.println("\nId: "+id);
-        System.out.println("Nombre: "+nombre);
-        System.out.println("Email: "+email);
-        System.out.println("Especialidad: "+espeliacion);
+        System.out.println("\nId: " + getId());
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Email: " + getEmail());
+        System.out.println("Especialidad: " + espeliacion);
     }
 
     public void MostrarId(){
-        System.out.println("Id: "+id);
+        System.out.println("Id: " + getId());
     }
 
 
@@ -40,6 +36,10 @@ public class Doctor {
     }
     public ArrayList<Citas> getCitas(){
         return citas;
+    }
+    @Override
+    public String toString() { //super.toString() llama al que esta en usuario y se sobreescribe
+        return super.toString() + "\nEspecialidad: " + espeliacion + "\nCitas: " + citas;
     }
 
     public static class Citas {
@@ -73,6 +73,11 @@ public class Doctor {
         }
         public Date getFecha() {
             return fecha;
+        }
+        @Override
+        public String toString() {
+            return "Citas{" + "fecha=" + fecha + ", \nidAsignacion=" + idAsignacion + 
+            ", \ntime=" + time + '}';
         }
     }
 
