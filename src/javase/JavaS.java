@@ -22,7 +22,7 @@ public class JavaS {
         Paciente paciente1 = new Paciente(1, "Pedro", "Perez",
          "01/01/2000", "Masculino", "A+", "1234567891",
           "Calle 123", "rYHbH@example.com", 80.0, 1.70);
-        System.out.println(paciente1); //aca se llama al toString sin necesidad de escribirlo
+        System.out.println(paciente1); //aca se llama al toString sin necesidad de escribirlo (polimorfismo)
 
     }
     

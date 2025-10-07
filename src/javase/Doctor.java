@@ -76,8 +76,8 @@ public class Doctor extends Usuario{
         }
         @Override
         public String toString() {
-            return "Citas{" + "fecha=" + fecha + ", \nidAsignacion=" + idAsignacion + 
-            ", \ntime=" + time + '}';
+            return "Citas{" + "fecha=" + getFecha() + ", \nidAsignacion=" + getIdAsignacion() + 
+            ", \ntime=" + getTime() + '}';
         }
     }
 

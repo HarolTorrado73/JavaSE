@@ -138,8 +138,18 @@ public class Paciente extends Usuario {
         return "+57: "+telefono;
     }
 
+    public String getDirreccion() {
+        return direccion;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
     @Override
     public String toString() {
-        return "Paciente{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", peso=" + peso + ", estatura=" + estatura + ", fechaNacimiento=" + fechaNacimiento + ", sexo=" + sexo + ", tipoSangre=" + tipoSangre + ", telefono=" + telefono + ", direccion=" + direccion + ", email=" + email + '}';
+        return "Paciente{" + "id=" + getId() + ", nombre=" + getNombre() + ", apellido=" + getApellido() + ", peso=" + getPeso() + 
+        "\n, estatura=" + getEstatura() + ", fechaNacimiento=" + getFechaNacimiento() + ", sexo=" + getSexo() + ", tipoSangre=" + getTipoSangre() + 
+        "\n, telefono=" + getTelefono() + ", direccion=" + getDirreccion() + ", email=" + getEmail() + '}';
     }
 }

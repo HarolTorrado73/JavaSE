@@ -21,6 +21,6 @@ public class Usuario {
     }
     @Override
     public String toString() {
-        return "Usuario{" + "id=" + id + ", nombre=" + nombre + ", email=" + email + '}';
+        return "Usuario{" + "id=" + getId() + ", nombre=" + getNombre() + ", email=" + getEmail() + '}';
     }
 }
