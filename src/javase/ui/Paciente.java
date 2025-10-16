@@ -141,7 +141,7 @@ public class Paciente extends Usuario {
     public String getDirreccion() {
         return direccion;
     }
-
+    @Override
     public String getEmail() {
         return email;
     }

@@ -15,7 +15,7 @@ public class JavaS {
         doctor1.AgregarCita(new Date(), "11:00 AM");
 
         System.out.println("\nCitas del doctor");
-        for (Doctor.Citas cita : doctor1.getCitas()) {
+        for (Doctor.Citas cita : doctor1.getCitas()) { //para recorrer las citas que se tienen en el arraylist
             System.out.println("Fecha: "+cita.getFecha()+" Time: "+cita.getTime());
         }
 
