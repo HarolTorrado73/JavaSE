@@ -6,10 +6,6 @@ import javase.ui.Usuario;
 
 public class Doctor extends Usuario{
     private String espeliacion;
-
-    
-    
-    
     //Doctor(){
        // System.out.println("construyecto el objeto doctor");
     //}  
@@ -75,6 +71,7 @@ public class Doctor extends Usuario{
             return fecha;
         }
         @Override
+        //sobreescribiendo el metodo toString de usuario
         public String toString() {
             return "Citas{" + "fecha=" + getFecha() + ", \nidAsignacion=" + getIdAsignacion() + 
             ", \ntime=" + getTime() + '}';
