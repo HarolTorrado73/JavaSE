@@ -3,16 +3,15 @@ package javase.ui;
 public class Enfermera extends Usuario {
     private String especialidad;
 
-    public Enfermera(String name, String email) {
-        super(name, email);
+    public Enfermera(int id, String nombre, String email) {
+        super(id, nombre, email);
     }
 
-    public String getEspecialidad() {
-        return especialidad;
+    @Override
+    public void mostrarDatosUsuario() {
+        System.out.println("\nDatos de la enfermera");
+        System.out.println("ID: " + getId());
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Email: " + getEmail());
     }
-
-    public void setEspecialidad(String especialidad) {
-        this.especialidad = especialidad;
-    }
-
 }
