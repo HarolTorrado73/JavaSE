@@ -14,4 +14,4 @@ public class Enfermera extends Usuario {
         System.out.println("Nombre: " + getNombre());
         System.out.println("Email: " + getEmail());
     }
-}
+} 

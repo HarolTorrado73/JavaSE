@@ -41,10 +41,11 @@ public class Doctor extends Usuario {
         return super.toString() + "\nEspecialidad: " + espeliacion + "\nCitas: " + citas;
     }
 
-    @Override
+    @Override // polimorfismo sobreescribiendo el metodo mostrarDatosUsuario de la clase
+              // Usuario
     public void mostrarDatosUsuario() {
         System.out.println("Datos del doctor\n");
-        System.out.println("Hospital : Cruz rojo");
+        System.out.println("Hospital : Cruz roja");
         System.out.println("Nombre: " + getNombre());
         System.out.println("Email: " + getEmail());
         System.out.println("Especialidad: " + espeliacion);
@@ -89,7 +90,7 @@ public class Doctor extends Usuario {
         public String toString() {
             return "Citas{" + "fecha=" + getFecha() + ", \nidAsignacion=" + getIdAsignacion() +
                     ", \ntime=" + getTime() + '}';
-                    //ESTE tostring se llama pero sin el super 
+            // ESTE tostring se llama pero sin el super
         }
     }
 

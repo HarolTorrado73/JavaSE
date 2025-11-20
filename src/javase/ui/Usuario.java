@@ -1,6 +1,7 @@
 package javase.ui;
 
 public abstract class Usuario {
+    //Clase abstracta no se puede instanciar
     private int id;
     private String nombre;
     private String email;
