@@ -19,7 +19,8 @@ public class Paciente extends Usuario {
 
     public Paciente(int id, String nombre, String apellido, String fechaNacimiento,
             String sexo, String tipoSangre, String telefono, String direccion,
-            String email, Double peso, Double estatura) { // sobre carga
+            String email, Double peso, Double estatura) { // sobrecarga overload
+        // super() es para llamar al constructor de la clase padre Usuario
         super(id, nombre, email);
         this.id = id;
         this.nombre = nombre;

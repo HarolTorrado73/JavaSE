@@ -32,6 +32,10 @@ public class JavaS {
 
         // Usuario usuario3 = new (comando para ver las opciones disponibles al crear un
         // nuevo objeto ctrol + espacio)
+        Usuario usuario3 = new Paciente(1, "Maria alejandra", "Melo", "01/05/2005",
+                "Femenino", "O+", "1234567890", "Calle 456", "d1RcJ@example.com", 70.0, 1.60);
+        usuario3.mostrarDatosUsuario(); // polimorfismo
+
     }
 
 }

@@ -37,7 +37,7 @@ public class Doctor extends Usuario {
     }
 
     @Override
-    public String toString() { // super.toString() llama al que esta en usuario y se sobreescribe
+    public String toString() { // super.toString() llama al que esta en usuario y se sobreescribe el toString
         return super.toString() + "\nEspecialidad: " + espeliacion + "\nCitas: " + citas;
     }
 
@@ -89,6 +89,7 @@ public class Doctor extends Usuario {
         public String toString() {
             return "Citas{" + "fecha=" + getFecha() + ", \nidAsignacion=" + getIdAsignacion() +
                     ", \ntime=" + getTime() + '}';
+                    //ESTE tostring se llama pero sin el super 
         }
     }
 
