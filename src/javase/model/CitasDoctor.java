@@ -12,6 +12,11 @@ public class CitasDoctor implements Checar {
     private Date fecha;
     private String time;
 
+    public CitasDoctor(Paciente paciente, Doctor doctor) {
+        this.paciente = paciente;
+        this.doctor = doctor;
+    }
+
     // getters y setters
     public int getId() {
         return id;
@@ -46,7 +51,7 @@ public class CitasDoctor implements Checar {
     }
 
     public String getTime() {
-        return time;
+        return time + " hs";
     }
 
     public void setTime(String time) {

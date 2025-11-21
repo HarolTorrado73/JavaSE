@@ -51,9 +51,9 @@ public class Menu {
         // 1 es para doctor
 
         ArrayList<Doctor> doctores = new ArrayList<>();
-        doctores.add(new Doctor(1, "Pedro", "pedro45@gmail", "Cardiologia"));
-        doctores.add(new Doctor(2, "Maria", "maria@gmail", "Pediatria"));
-        doctores.add(new Doctor(3, "Luisa", "luisa@gmail", "Pediatria"));
+        doctores.add(new Doctor(1, "Pedro", "pedro45@gmail.com", "Cardiologia"));
+        doctores.add(new Doctor(2, "Maria", "maria@gmail.com", "Pediatria"));
+        doctores.add(new Doctor(3, "Luisa", "luisa@gmail.com", "Pediatria"));
 
         ArrayList<Paciente> pacientes = new ArrayList<>();
         pacientes.add(new Paciente(1, "Pedro", "Perez",

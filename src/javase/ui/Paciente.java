@@ -1,5 +1,8 @@
 package javase.ui;
 
+import java.lang.reflect.Array;
+import javase.model.CitasEnfermera;
+
 public class Paciente extends Usuario {
     private int id;
     private String nombre;
@@ -12,6 +15,9 @@ public class Paciente extends Usuario {
     private String telefono;
     private String direccion;
     private String email;
+
+    private ArrayList<CitasDoctor> citasDoctor = new ArrayList<>();
+    private ArrayList<CitasEnfermera> citasEnfermera = new ArrayList<>();
 
     public Paciente() {
         super(0, "", "");
@@ -167,5 +173,28 @@ public class Paciente extends Usuario {
                 "\n, estatura=" + getEstatura() + ", fechaNacimiento=" + getFechaNacimiento() + ", sexo=" + getSexo()
                 + ", tipoSangre=" + getTipoSangre() +
                 "\n, telefono=" + getTelefono() + ", direccion=" + getDirreccion() + ", email=" + getEmail() + '}';
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public ArrayList<CitasDoctor> getCitasDoctor() {
+        return citasDoctor;
+    }
+
+    public ArrayList<CitasEnfermera> getCitasEnfermera() {
+        return citasEnfermera;
+    }
+
+    public void addCitasDoctor(Doctor doctor, Date fecha, String time) {
+        CitasDoctor citasDoctor = new CitasDoctor(this, doctor, fecha, time); //para tomar los datos
+        //cuando ya se tengas los datos se agrega a la lista
+        citasDoctor.checar(fecha, time);
+        citasDoctor.add(citasDoctor);
+    }
+
+    public void addCitasEnfermera(ArrayList<CitasEnfermera> citasEnfermera) {
+        this.citasEnfermera = citasEnfermera;
     }
 }

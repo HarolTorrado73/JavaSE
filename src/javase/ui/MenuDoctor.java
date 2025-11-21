@@ -31,6 +31,14 @@ public class MenuDoctor {
                     System.out.println("Ver citas");
                     // Lógica para ver citas
                 }
+                case 0 -> {
+                    System.out.println("Salir");
+                    sc.close();
+                    return;
+                }
+                default -> {
+                    System.out.println("Opcion no valida");
+                }
             }
 
         } while (response != 0);
