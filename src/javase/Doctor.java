@@ -1,5 +1,6 @@
 package javase;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import javase.ui.Usuario;
@@ -28,8 +29,8 @@ public class Doctor extends Usuario {
 
     ArrayList<Citas> citas = new ArrayList<>();
 
-    public void AgregarCita(Date fecha, String time) {
-        citas.add(new Citas(fecha, time));
+    public void AgregarCita(String date, String time) {
+        citas.add(new Citas(date, time));
     }
 
     public ArrayList<Citas> getCitas() {
@@ -52,12 +53,18 @@ public class Doctor extends Usuario {
     }
 
     public static class Citas {
-        private Date fecha;
+        private Date date;
         private int idAsignacion;
         private String time;
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy"); // formato de fecha (patron)
 
-        public Citas(Date fecha, String time) {
-            this.fecha = fecha;
+        public Citas(String date, String time) {
+            try {
+                this.date = format.parse(date); // parse convierte string a date
+            } catch (Exception e) { // validacion de nuestro error
+                e.printStackTrace();
+            }
+
             this.time = time;
         }
 
@@ -69,8 +76,8 @@ public class Doctor extends Usuario {
             this.time = time;
         }
 
-        public void setFecha(Date fecha) {
-            this.fecha = fecha;
+        public void setDate(Date date) {
+            this.date = date;
         }
 
         public int getIdAsignacion() {
@@ -81,14 +88,18 @@ public class Doctor extends Usuario {
             return time;
         }
 
-        public Date getFecha() {
-            return fecha;
+        public Date getDate() {
+            return date;
+        }
+
+        public String getDate(String DATE) { // DATRE identificador de bandera
+            return format.format(date);
         }
 
         @Override
         // sobreescribiendo el metodo toString de usuario
         public String toString() {
-            return "Citas{" + "fecha=" + getFecha() + ", \nidAsignacion=" + getIdAsignacion() +
+            return "Citas{" + "fecha=" + getDate("DATE") + ", \nidAsignacion=" + getIdAsignacion() +
                     ", \ntime=" + getTime() + '}';
             // ESTE tostring se llama pero sin el super
         }

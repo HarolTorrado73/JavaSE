@@ -2,6 +2,7 @@ package javase.ui;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import javase.Doctor;
 
 public class Menu {
 
@@ -75,9 +76,10 @@ public class Menu {
                     if (doctor.getEmail().equals(email)) {
                         System.out.println("Bienvenido Dr. " + doctor.getNombre());
                         autenticado = true;
-                        doctorLogged = d;
+                        doctorLogged = doctor;
                         // Mostrar menu de doctor
-                        
+                        MenuDoctor.MostrarMenuDoctor();
+
                         break;
                     }
                 }
@@ -87,7 +89,7 @@ public class Menu {
                         System.out.println("Bienvenido " + paciente.getNombre());
                         autenticado = true;
                         // Mostrar menu de paciente
-                        pacienteLogged = p;
+                        pacienteLogged = paciente;
                         MostrarPacienteMenu();
                         break;
                     }

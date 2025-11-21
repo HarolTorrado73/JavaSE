@@ -1,10 +1,12 @@
 package javase.model;
 
+import java.util.Date;
+import javase.Doctor;
 import javase.ui.Paciente;
 
 public class CitasDoctor implements Checar {
 
-    private ind id;
+    private int id;
     private Paciente paciente;
     private Doctor doctor;
     private Date fecha;
@@ -51,4 +53,9 @@ public class CitasDoctor implements Checar {
         this.time = time;
     }
 
+    @Override
+    public void checar(Date fecha, String time) {
+        this.fecha = fecha;
+        this.time = time;
+    }
 }

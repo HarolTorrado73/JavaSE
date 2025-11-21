@@ -1,7 +1,6 @@
 package javase.ui;
 
 public class Enfermera extends Usuario {
-    private String especialidad;
 
     public Enfermera(int id, String nombre, String email) {
         super(id, nombre, email);
@@ -14,4 +13,4 @@ public class Enfermera extends Usuario {
         System.out.println("Nombre: " + getNombre());
         System.out.println("Email: " + getEmail());
     }
-} 
+}

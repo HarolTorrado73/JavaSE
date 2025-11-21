@@ -1,6 +1,5 @@
 package javase;
 
-import java.util.Date;
 import javase.ui.Enfermera;
 import javase.ui.Paciente;
 import javase.ui.Usuario;
@@ -11,12 +10,12 @@ public class JavaS {
 
         // Menu.MostrarMenu();
         Doctor doctor1 = new Doctor(1, "Pedro", "pedro45@gmail", "Cardiologia");
-        doctor1.AgregarCita(new Date(), "10:00 AM");
-        doctor1.AgregarCita(new Date(), "11:00 AM");
+        doctor1.AgregarCita("21/11/2025", "10:00 AM");
+        doctor1.AgregarCita("22/11/2025", "11:00 AM");
 
         System.out.println("\nCitas del doctor");
         for (Doctor.Citas cita : doctor1.getCitas()) { // para recorrer las citas que se tienen en el arraylist
-            System.out.println("Fecha: " + cita.getFecha() + " Time: " + cita.getTime());
+            System.out.println("Fecha: " + cita.getDate("DATE") + " Time: " + cita.getTime());
         }
 
         Paciente paciente1 = new Paciente(1, "Pedro", "Perez",
